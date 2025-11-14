@@ -26,18 +26,18 @@ create table Solicitacao(
 
 
 INSERT INTO Admin (nome, matricula, senha) VALUES
-('Pedro Silva', 'ADM123456', 'admin123'),
-('Ana Souza', 'ADM987654', 'admin456'),
-('Carlos Ferreira', 'ADM000111', 'admin789'),
-('Gabriel Rocha', 'ADM001122', 'senha123'),
-('Lívia Martins', 'ADM223344', 'teste'),
-('Ricardo Neves', 'ADM445566', 'admin_ric'),
-('Sofia Pires', 'ADM667788', '998877'),
-('Tiago Alves', 'ADM889900', 'abcde'),
-('Helena Costa', 'ADM101010', 'helenap'),
-('João Gomes', 'ADM202020', 'joaoz'),
-('Clara Dantas', 'ADM303030', 'clarinha'),
-('Bruno Meireles', 'ADM404040', 'brunom');
+('Pedro Silva', 'ADM123456', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('Ana Souza', 'ADM987654', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('Carlos Ferreira', 'ADM000111', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('Gabriel Rocha', 'ADM001122', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('Lívia Martins', 'ADM223344', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('Ricardo Neves', 'ADM445566', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('Sofia Pires', 'ADM667788', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('Tiago Alves', 'ADM889900', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('Helena Costa', 'ADM101010', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('João Gomes', 'ADM202020', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('Clara Dantas', 'ADM303030', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u'),
+('Bruno Meireles', 'ADM404040', '$2b$10$iOjWl07HkrRVTK54A1a2/uoPLiuqg/40eYn4lfwP16MGTR2f1hL0u');
 
 INSERT INTO Solicitacao (
     nome_solicitante, matricula_solicitante, cargo, local_chamada, descricao, categoria, prioridade, status

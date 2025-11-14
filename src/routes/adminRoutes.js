@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router()
 const adminController = require("../controllers/adminController");
+const authMiddleware = require('../middleware/authMiddleware');
 
 
-router.get('/', adminController.getAllAdmins);
-router.get('/:id', adminController.getAdminById);
-router.post('/', adminController.createAdmin);
-router.put('/:id', adminController.updateAdmin);
-router.delete('/:id', adminController.deleteAdmin);
+router.get('/', authMiddleware, adminController.getAllAdmins);
+router.get('/:id', authMiddleware, adminController.getAdminById);
+router.post('/', authMiddleware ,adminController.createAdmin);
+router.put('/:id', authMiddleware, adminController.updateAdmin);
+router.delete('/:id', authMiddleware, adminController.deleteAdmin);
 
 module.exports=router;

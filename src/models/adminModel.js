@@ -1,5 +1,3 @@
-// models/Admin.js
-
 const {Sequelize, DataTypes} = require("sequelize");
 const sequelize = require("../config/database");
 const bcrypt = require('bcryptjs');
@@ -38,8 +36,28 @@ const Admin = sequelize.define(
         tableName: 'Admin',
         timestamps: true,
         createdAt: "data_criacao",
-        updatedAt: "data_atualizacao"
+        updatedAt: "data_atualizacao",
+
+        hooks: {
+            beforeCreate: async (admin)=>{
+                if (admin.senha) {
+                    const salt = await bcrypt.genSalt(10);
+                    admin.senha = await bcrypt.hash(admin.senha, salt);
+                }
+            },
+            
+            beforeUpdate: async (admin)=>{
+                if (admin.senha && admin.changed('senha')) {
+                    const salt = await bcrypt.genSalt(10);
+                    admin.senha = await bcrypt.hash(admin.senha, salt);
+                }
+            }
+        }
     }
 )
+
+Admin.prototype.comparePassword = function(senhaFornecida) {
+    return bcrypt.compare(senhaFornecida, this.senha);
+};
 
 module.exports = Admin
